@@ -35,19 +35,20 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             text-align: center;
             overflow: hidden;
-            padding: 20px;
+            padding: 30px 20px;
             margin: 15px;
         }
 
         .logo-container img {
             width: 100%;
-            max-width: 250px;
+            max-width: 280px; /* Un poco más grande para mejor definición */
             height: auto;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
         }
 
-        h1 { font-size: 24px; color: var(--azul-pro); text-transform: uppercase; letter-spacing: 2px; }
-        p.subtitle { font-size: 14px; color: var(--dorado); font-weight: bold; margin-bottom: 25px; }
+        h1 { font-size: 24px; color: var(--azul-pro); text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; }
+        p.subtitle { font-size: 14px; color: var(--dorado); font-weight: bold; margin-bottom: 25px; letter-spacing: 1px; }
 
         .btn-container { display: grid; gap: 12px; }
 
@@ -59,8 +60,9 @@
             text-decoration: none;
             border-radius: 12px;
             font-weight: 700;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             color: var(--blanco);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .btn:active { transform: scale(0.95); }
@@ -79,11 +81,13 @@
             color: #888;
             border-top: 1px solid #eee;
             padding-top: 15px;
+            line-height: 1.5;
         }
 
         /* Responsive */
         @media (max-width: 350px) {
             h1 { font-size: 20px; }
+            .card { padding: 15px; }
         }
     </style>
 </head>
@@ -91,7 +95,7 @@
 
     <div class="card" id="mainCard">
         <div class="logo-container">
-            <img src="https://haroldco45.github.io/suarezygarcia/logo.png" alt="Suarez y Garcia Logo">
+            <img src="1775640713603.png" alt="Suarez y Garcia Logo">
         </div>
         
         <h1>Suarez y Garcia</h1>
@@ -128,10 +132,9 @@
     <script>
         /**
          * CONTROL INVISIBLE DE SUSCRIPCIÓN
-         * Valida la fecha de vencimiento almacenada.
          */
         (function() {
-            const fechaVencimiento = new Date('2027-04-08'); // Vigencia 1 año
+            const fechaVencimiento = new Date('2027-04-08'); 
             const hoy = new Date();
 
             if (hoy > fechaVencimiento) {
